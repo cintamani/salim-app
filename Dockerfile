@@ -55,7 +55,7 @@ RUN bundle exec bootsnap precompile -j 1 app/ lib/
 # After precompile, restore correct CSS and overwrite the fingerprinted copy in public/assets
 RUN cp app/assets/builds/tailwind.css /tmp/tailwind.css && \
     SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile && \
-    DIGESTED_PATH=$(ruby -rjson -e "puts JSON.parse(File.read('public/assets/.manifest.json'))['tailwind.css']") && \
+    DIGESTED_PATH=$(ruby -rjson -e "puts JSON.parse(File.read('public/assets/.manifest.json'))['tailwind.css']['digested_path']") && \
     cp /tmp/tailwind.css "public/assets/$DIGESTED_PATH"
 
 
