@@ -9,6 +9,19 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
-  # Defines the root path route ("/")
-  root "home#index"
+  # Admin routes (no locale)
+  namespace :admin do
+    get "login", to: "sessions#new"
+    post "login", to: "sessions#create"
+    delete "logout", to: "sessions#destroy"
+    get "dashboard", to: "dashboard#index"
+  end
+
+  # Localized routes
+  scope "(:locale)", locale: /en|es|de|fr/ do
+    root "home#index"
+  end
+
+  # Default root (Italian - no locale prefix)
+  root "home#index", as: :root_it
 end

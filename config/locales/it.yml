@@ -1,0 +1,20 @@
+it:
+  languages:
+    it: "Italiano"
+    en: "English"
+    es: "Español"
+    de: "Deutsch"
+    fr: "Français"
+  home:
+    title: "Il Portale di Salim ODV"
+    subtitle: "Benvenuto nell'area riservata per sostenitori e volontari."
+    visit_link: "Visita salimodv.org per maggiori informazioni"
+  footer:
+    description: "Salim ODV - Organizzazione di Volontariato per il sostegno a distanza di famiglie in Kenya."
+    rights: "Tutti i diritti riservati."
+  admin:
+    sessions:
+      logged_in: "Accesso effettuato con successo."
+      logged_out: "Disconnessione effettuata."
+      invalid_credentials: "Email o password non validi."
+      login_required: "Devi effettuare l'accesso per continuare."

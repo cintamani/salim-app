@@ -1,0 +1,14 @@
+es:
+  languages:
+    it: "Italiano"
+    en: "English"
+    es: "Español"
+    de: "Deutsch"
+    fr: "Français"
+  home:
+    title: "El Portal de Salim ODV"
+    subtitle: "Bienvenido al área reservada para colaboradores y voluntarios."
+    visit_link: "Visita salimodv.org para más información"
+  footer:
+    description: "Salim ODV - Organización de Voluntariado para el apoyo a distancia de familias en Kenia."
+    rights: "Todos los derechos reservados."

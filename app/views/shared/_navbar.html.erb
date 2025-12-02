@@ -1,10 +1,17 @@
 <nav class="bg-verdone fixed top-0 left-0 right-0 z-50 shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-center items-center h-20">
+    <div class="flex justify-between items-center h-20">
       <!-- Logo -->
       <div class="flex-shrink-0">
         <%= link_to root_path, class: "flex items-center" do %>
           <%= image_tag 'logos/logo_extended_green_1.svg', alt: 'Salim ODV', class: 'h-14' %>
+        <% end %>
+      </div>
+
+      <!-- Admin Login -->
+      <div>
+        <%= link_to admin_login_path, class: "text-verdino hover:text-white text-sm font-medium transition-colors duration-200" do %>
+          Area Admin
         <% end %>
       </div>
     </div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Salim ODV</title>
+
+    <%# Google Fonts - Saira Condensed and Prompt %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Saira+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="<%= asset_path('logos/logo_piccolo.svg') %>" type="image/svg+xml">
+
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="font-prompt bg-gray-100 min-h-screen">
+    <% if admin_signed_in? %>
+      <!-- Admin Navigation -->
+      <nav class="bg-verdone shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+              <%= link_to admin_dashboard_path, class: "flex items-center" do %>
+                <%= image_tag 'logos/logo_extended_green_1.svg', alt: 'Salim ODV', class: 'h-10' %>
+              <% end %>
+              <span class="ml-4 text-verdino font-saira text-lg">Admin</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-gray-300 text-sm"><%= current_admin.name %></span>
+              <%= button_to "Logout", admin_logout_path, method: :delete,
+                  class: "text-verdino hover:text-white text-sm transition-colors duration-200" %>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <% end %>
+
+<%= render 'shared/flash' %>
+
+    <main class="<%= admin_signed_in? ? 'py-8' : '' %>">
+      <%= yield %>
+    </main>
+  </body>
+</html>

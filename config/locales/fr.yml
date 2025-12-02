@@ -1,0 +1,14 @@
+fr:
+  languages:
+    it: "Italiano"
+    en: "English"
+    es: "Español"
+    de: "Deutsch"
+    fr: "Français"
+  home:
+    title: "Le Portail de Salim ODV"
+    subtitle: "Bienvenue dans l'espace réservé aux donateurs et bénévoles."
+    visit_link: "Visitez salimodv.org pour plus d'informations"
+  footer:
+    description: "Salim ODV - Organisation de Bénévolat pour le soutien à distance des familles au Kenya."
+    rights: "Tous droits réservés."

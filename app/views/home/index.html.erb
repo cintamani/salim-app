@@ -10,15 +10,15 @@
   <!-- Banner Content -->
   <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
     <h1 class="font-saira text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-      Il Portale di Salim ODV
+      <%= t('home.title') %>
     </h1>
     <p class="font-prompt text-lg md:text-xl text-verdino mb-8 max-w-2xl mx-auto">
-      Benvenuto nell'area riservata per sostenitori e volontari.
+      <%= t('home.subtitle') %>
     </p>
     <div class="mt-8">
-      <%= link_to 'https://salimodv.org', target: '_blank', rel: 'noopener noreferrer',
+      <%= link_to "https://salimodv.org/#{I18n.locale == :it ? '' : I18n.locale}", target: '_blank', rel: 'noopener noreferrer',
           class: 'inline-flex items-center gap-2 bg-transparent border-2 border-verdino text-verdino hover:bg-verdino hover:text-verdone font-saira font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg' do %>
-        Visita salimodv.org per maggiori informazioni
+        <%= t('home.visit_link') %>
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
         </svg>

@@ -3,14 +3,27 @@
     <div class="text-center">
       <%= image_tag 'logos/logo_extended_green_1.svg', alt: 'Salim ODV', class: 'h-12 mx-auto mb-4' %>
       <p class="text-gray-300 text-sm max-w-md mx-auto">
-        Salim ODV - Organizzazione di Volontariato per il sostegno a distanza di famiglie in Kenya.
+        <%= t('footer.description') %>
       </p>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="mt-8 flex justify-center items-center gap-4">
+      <% %i[it en es de fr].each do |locale| %>
+        <% if locale == I18n.locale %>
+          <span class="text-verdino font-semibold text-sm"><%= t("languages.#{locale}") %></span>
+        <% else %>
+          <%= link_to t("languages.#{locale}"),
+              root_path(locale: locale == :it ? nil : locale),
+              class: 'text-gray-400 hover:text-verdino text-sm transition-colors duration-200' %>
+        <% end %>
+      <% end %>
     </div>
 
     <!-- Bottom Bar -->
     <div class="mt-8 pt-6 border-t border-gray-700">
       <p class="text-gray-400 text-sm text-center">
-        &copy; <%= Time.current.year %> Salim ODV. Tutti i diritti riservati.
+        &copy; <%= Time.current.year %> Salim ODV. <%= t('footer.rights') %>
       </p>
     </div>
   </div>
