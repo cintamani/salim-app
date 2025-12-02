@@ -51,7 +51,10 @@ COPY . .
 RUN bundle exec bootsnap precompile -j 1 app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+# Preserve pre-built Tailwind CSS (built locally with full class detection)
+RUN cp app/assets/builds/tailwind.css /tmp/tailwind.css && \
+    SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile && \
+    cp /tmp/tailwind.css app/assets/builds/tailwind.css
 
 
 
