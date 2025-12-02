@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* Explicit source paths for Docker build */
-@source "../../views/**/*.erb";
-@source "../../helpers/**/*.rb";
-@source "../../javascript/**/*.js";
+/* Explicit source paths - relative to project root */
+@source "./app/views/**/*.erb";
+@source "./app/helpers/**/*.rb";
+@source "./app/javascript/**/*.js";
 
 /* Salim ODV Color Palette */
 @theme {
