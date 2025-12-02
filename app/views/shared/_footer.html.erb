@@ -1,0 +1,71 @@
+<footer class="bg-footer text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Column 1: Logo and Description -->
+      <div>
+        <%= image_tag 'logos/logo_extended_green_1.svg', alt: 'Salim ODV', class: 'h-12 mb-4' %>
+        <p class="text-gray-300 text-sm">
+          Salim ODV - Organizzazione di Volontariato per il sostegno a distanza di bambini e famiglie in Kenya.
+        </p>
+      </div>
+
+      <!-- Column 2: Contact Info -->
+      <div>
+        <h4 class="text-warning font-saira font-semibold text-lg mb-4">Contatti</h4>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>
+            <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            info@salim.it
+          </li>
+          <li>
+            <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Italia
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Quick Links -->
+      <div>
+        <h4 class="text-warning font-saira font-semibold text-lg mb-4">Link Utili</h4>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><%= link_to 'Chi Siamo', '#', class: 'hover:text-verdino transition-colors duration-200' %></li>
+          <li><%= link_to 'I Nostri Progetti', '#', class: 'hover:text-verdino transition-colors duration-200' %></li>
+          <li><%= link_to 'Come Aiutarci', '#', class: 'hover:text-verdino transition-colors duration-200' %></li>
+          <li><%= link_to 'Trasparenza', '#', class: 'hover:text-verdino transition-colors duration-200' %></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Donate -->
+      <div>
+        <h4 class="text-warning font-saira font-semibold text-lg mb-4">Sostienici</h4>
+        <p class="text-gray-300 text-sm mb-4">
+          Puoi fare una donazione tramite bonifico bancario:
+        </p>
+        <p class="text-verdino font-mono text-sm break-all">
+          IBAN: IT00X0000000000000000000000
+        </p>
+        <div class="mt-4">
+          <%= link_to 'Dona Ora', '#', class: 'inline-block bg-primary hover:bg-salim-green-600 text-white font-saira font-semibold px-6 py-2 rounded-lg transition-colors duration-200' %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-8 border-t border-gray-700">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">
+          &copy; <%= Time.current.year %> Salim ODV. Tutti i diritti riservati.
+        </p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <%= link_to 'Privacy Policy', '#', class: 'text-gray-400 hover:text-verdino text-sm transition-colors duration-200' %>
+          <%= link_to 'Cookie Policy', '#', class: 'text-gray-400 hover:text-verdino text-sm transition-colors duration-200' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

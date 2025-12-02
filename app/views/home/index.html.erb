@@ -1,0 +1,193 @@
+<%# Hero Section %>
+<section class="relative h-[80vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <%= image_tag 'backgrounds/sfondo_strada.webp',
+        class: 'w-full h-full object-cover',
+        alt: 'Salim ODV - Kenya' %>
+    <div class="absolute inset-0 bg-verdone/70"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    <h1 class="font-saira text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+      Insieme per un futuro migliore
+    </h1>
+    <p class="font-prompt text-lg md:text-xl text-verdino mb-8 max-w-2xl mx-auto">
+      Sosteniamo bambini e famiglie in Kenya attraverso istruzione, alimentazione e progetti di sviluppo sostenibile.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <%= link_to 'Scopri i Progetti', '#projects',
+          class: 'bg-primary hover:bg-salim-green-600 text-white font-saira font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg' %>
+      <%= link_to 'Dona Ora', '#donate',
+          class: 'bg-transparent border-2 border-verdino text-verdino hover:bg-verdino hover:text-verdone font-saira font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg' %>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-verdino" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
+</section>
+
+<%# Mission Statement %>
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="font-saira text-3xl md:text-4xl font-bold text-verdone mb-6">
+        La Nostra Missione
+      </h2>
+      <p class="font-prompt text-gray-600 text-lg leading-relaxed">
+        Salim ODV nasce dalla volonta di creare un ponte tra Italia e Kenya, offrendo opportunita concrete a bambini e famiglie attraverso programmi di sostegno a distanza, accesso all'istruzione e progetti di sviluppo comunitario.
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="font-saira text-4xl md:text-5xl font-bold text-primary">500+</div>
+        <div class="font-prompt text-gray-600 mt-2">Bambini Sostenuti</div>
+      </div>
+      <div class="text-center">
+        <div class="font-saira text-4xl md:text-5xl font-bold text-primary">15+</div>
+        <div class="font-prompt text-gray-600 mt-2">Anni di Attivita</div>
+      </div>
+      <div class="text-center">
+        <div class="font-saira text-4xl md:text-5xl font-bold text-primary">10+</div>
+        <div class="font-prompt text-gray-600 mt-2">Progetti Attivi</div>
+      </div>
+      <div class="text-center">
+        <div class="font-saira text-4xl md:text-5xl font-bold text-primary">100%</div>
+        <div class="font-prompt text-gray-600 mt-2">Trasparenza</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# Projects Section %>
+<section id="projects" class="py-16 md:py-24 bg-salim-green-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="font-saira text-3xl md:text-4xl font-bold text-verdone mb-4">
+        I Nostri Progetti
+      </h2>
+      <p class="font-prompt text-gray-600 text-lg max-w-2xl mx-auto">
+        Scopri come stiamo facendo la differenza nella vita di centinaia di persone.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <%# Project Card 1 - Sostegno a Distanza %>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+        <div class="relative h-48 overflow-hidden">
+          <%= image_tag 'photos/sostegni_distanza.jpg',
+              class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300',
+              alt: 'Sostegno a distanza' %>
+          <div class="absolute inset-0 bg-gradient-to-t from-verdone/60 to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-saira text-xl font-bold text-verdone mb-2">Sostegno a Distanza</h3>
+          <p class="font-prompt text-gray-600 text-sm mb-4">
+            Adotta un bambino a distanza e garantiscigli istruzione, cure mediche e un pasto al giorno.
+          </p>
+          <%= link_to 'Scopri di piu', '#',
+              class: 'inline-flex items-center text-primary hover:text-salim-green-600 font-saira font-semibold transition-colors duration-200' %>
+        </div>
+      </div>
+
+      <%# Project Card 2 - Progetto Scuola %>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+        <div class="relative h-48 overflow-hidden">
+          <%= image_tag 'photos/scuola.jpg',
+              class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300',
+              alt: 'Progetto Scuola' %>
+          <div class="absolute inset-0 bg-gradient-to-t from-verdone/60 to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-saira text-xl font-bold text-verdone mb-2">Progetto Scuola</h3>
+          <p class="font-prompt text-gray-600 text-sm mb-4">
+            Costruzione e sostegno di scuole per garantire l'accesso all'istruzione a tutti i bambini.
+          </p>
+          <%= link_to 'Scopri di piu', '#',
+              class: 'inline-flex items-center text-primary hover:text-salim-green-600 font-saira font-semibold transition-colors duration-200' %>
+        </div>
+      </div>
+
+      <%# Project Card 3 - Progetto Animali %>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+        <div class="relative h-48 overflow-hidden">
+          <%= image_tag 'photos/progetto_animali.jpg',
+              class: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300',
+              alt: 'Progetto Animali' %>
+          <div class="absolute inset-0 bg-gradient-to-t from-verdone/60 to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-saira text-xl font-bold text-verdone mb-2">Progetto Animali</h3>
+          <p class="font-prompt text-gray-600 text-sm mb-4">
+            Donazione di animali da allevamento per garantire sostentamento alle famiglie locali.
+          </p>
+          <%= link_to 'Scopri di piu', '#',
+              class: 'inline-flex items-center text-primary hover:text-salim-green-600 font-saira font-semibold transition-colors duration-200' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <%= link_to 'Vedi Tutti i Progetti', '#',
+          class: 'inline-block bg-primary hover:bg-salim-green-600 text-white font-saira font-semibold px-8 py-3 rounded-lg transition-colors duration-200' %>
+    </div>
+  </div>
+</section>
+
+<%# CTA Section %>
+<section id="donate" class="py-16 md:py-24 bg-verdone">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="font-saira text-3xl md:text-4xl font-bold text-white mb-6">
+      Fai la Differenza Oggi
+    </h2>
+    <p class="font-prompt text-verdino text-lg max-w-2xl mx-auto mb-8">
+      Ogni contributo, grande o piccolo, ci aiuta a cambiare la vita di bambini e famiglie in Kenya. Unisciti a noi nella nostra missione.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <%= link_to 'Dona Ora', '#',
+          class: 'bg-primary hover:bg-salim-green-600 text-white font-saira font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg' %>
+      <%= link_to 'Diventa Volontario', '#',
+          class: 'bg-transparent border-2 border-verdino text-verdino hover:bg-verdino hover:text-verdone font-saira font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg' %>
+    </div>
+
+    <!-- IBAN Info -->
+    <div class="mt-12 p-6 bg-white/10 rounded-xl max-w-md mx-auto">
+      <p class="text-verdino font-prompt text-sm mb-2">Puoi anche donare tramite bonifico:</p>
+      <p class="text-white font-mono text-sm break-all">IBAN: IT00X0000000000000000000000</p>
+      <p class="text-verdino font-prompt text-xs mt-2">Intestato a: Salim ODV</p>
+    </div>
+  </div>
+</section>
+
+<%# Testimonial/About Section %>
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <%= image_tag 'photos/jessica_bimbi.jpg',
+            class: 'rounded-xl shadow-xl w-full',
+            alt: 'La nostra storia' %>
+      </div>
+      <div>
+        <h2 class="font-saira text-3xl md:text-4xl font-bold text-verdone mb-6">
+          La Nostra Storia
+        </h2>
+        <p class="font-prompt text-gray-600 text-lg leading-relaxed mb-6">
+          Salim ODV e nata dall'incontro con il Kenya e la sua gente. Un viaggio che ha cambiato la vita dei fondatori e li ha spinti a creare qualcosa di concreto per aiutare chi ha piu bisogno.
+        </p>
+        <p class="font-prompt text-gray-600 text-lg leading-relaxed mb-8">
+          Da allora, grazie al supporto di centinaia di sostenitori, abbiamo potuto fare la differenza nella vita di molti bambini e famiglie.
+        </p>
+        <%= link_to 'Scopri Chi Siamo', '#',
+            class: 'inline-flex items-center text-primary hover:text-salim-green-600 font-saira font-semibold text-lg transition-colors duration-200' %>
+      </div>
+    </div>
+  </div>
+</section>

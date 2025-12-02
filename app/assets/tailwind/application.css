@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Salim ODV Color Palette */
+@theme {
+  /* Primary Colors */
+  --color-verdone: #1c2416;
+  --color-verdino: #c5d187;
+  --color-primary: #598f31;
+  --color-secondary: #b0772d;
+  --color-footer: #382213;
+  --color-dark-brown: #714017;
+
+  /* Extended palette */
+  --color-salim-green-50: #f4f7e9;
+  --color-salim-green-100: #e5ebc9;
+  --color-salim-green-200: #c5d187;
+  --color-salim-green-300: #9fbf5c;
+  --color-salim-green-400: #7aad3f;
+  --color-salim-green-500: #598f31;
+  --color-salim-green-600: #4a7628;
+  --color-salim-green-700: #3a5d20;
+  --color-salim-green-800: #2a4417;
+  --color-salim-green-900: #1c2416;
+
+  --color-salim-brown-50: #fdf8f3;
+  --color-salim-brown-100: #f8ebe0;
+  --color-salim-brown-200: #e8cdb0;
+  --color-salim-brown-300: #d4a976;
+  --color-salim-brown-400: #b0772d;
+  --color-salim-brown-500: #8b5a1b;
+  --color-salim-brown-600: #714017;
+  --color-salim-brown-700: #5a3312;
+  --color-salim-brown-800: #382213;
+  --color-salim-brown-900: #24160c;
+
+  /* Accent colors */
+  --color-warning: #ffbf4a;
+  --color-danger: #f1005e;
+  --color-success: #4da300;
+
+  /* Font families */
+  --font-saira: "Saira Condensed", sans-serif;
+  --font-prompt: "Prompt", sans-serif;
+}
