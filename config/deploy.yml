@@ -2,7 +2,7 @@
 service: salim_app
 
 # Name of the container image (use your-user/app-name on external registries).
-image: cintamani/salim_app
+image: cintamanipuddu/salim_app
 
 # Deploy to these servers.
 servers:
@@ -50,7 +50,7 @@ env:
     # WEB_CONCURRENCY: 2
 
     # Database host (MySQL server)
-    SALIM_APP_DATABASE_HOST: 164.92.156.164
+    SALIM_APP_DATABASE_HOST: 10.110.0.3
     SALIM_APP_DATABASE_USERNAME: app_salim_odv
 
     # Log everything from Rails
