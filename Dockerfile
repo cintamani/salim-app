@@ -52,9 +52,11 @@ RUN bundle exec bootsnap precompile -j 1 app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 # Preserve pre-built Tailwind CSS (built locally with full class detection)
+# After precompile, restore correct CSS and overwrite the fingerprinted copy in public/assets
 RUN cp app/assets/builds/tailwind.css /tmp/tailwind.css && \
     SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile && \
-    cp /tmp/tailwind.css app/assets/builds/tailwind.css
+    DIGESTED_PATH=$(ruby -rjson -e "puts JSON.parse(File.read('public/assets/.manifest.json'))['tailwind.css']") && \
+    cp /tmp/tailwind.css "public/assets/$DIGESTED_PATH"
 
 
 
