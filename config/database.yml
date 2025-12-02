@@ -59,7 +59,7 @@ production:
     <<: *default
     database: salim_app_production
     host: <%= ENV["SALIM_APP_DATABASE_HOST"] %>
-    username: <%= ENV.fetch("SALIM_APP_DATABASE_USERNAME", "salim_app") %>
+    username: <%= ENV.fetch("SALIM_APP_DATABASE_USERNAME", "app_salim_odv") %>
     password: <%= ENV["SALIM_APP_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production

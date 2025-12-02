@@ -2,15 +2,15 @@
 service: salim_app
 
 # Name of the container image (use your-user/app-name on external registries).
-image: salim_app
+image: cintamani/salim_app
 
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 164.90.199.170
   # job:
   #   hosts:
-  #     - 192.168.0.1
+  #     - 164.90.199.170
   #   cmd: bin/jobs
 
 # Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
@@ -20,26 +20,24 @@ servers:
 #
 # Don't use this when deploying to multiple web servers (then you have to terminate SSL at your load balancer).
 #
-# proxy:
-#   ssl: true
-#   host: app.example.com
+proxy:
+  ssl: true
+  host: app.salimodv.org
 
 # Where you keep your container images.
 registry:
-  # Alternatives: hub.docker.com / registry.digitalocean.com / ghcr.io / ...
-  server: localhost:5555
-
-  # Needed for authenticated registries.
-  # username: your-user
-
-  # Always use an access token rather than real password when possible.
-  # password:
-  #   - KAMAL_REGISTRY_PASSWORD
+  # Using Docker Hub
+  server: docker.io
+  username:
+    - KAMAL_REGISTRY_USERNAME
+  password:
+    - KAMAL_REGISTRY_PASSWORD
 
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
   secret:
     - RAILS_MASTER_KEY
+    - SALIM_APP_DATABASE_PASSWORD
   clear:
     # Run the Solid Queue Supervisor inside the web server's Puma process to do jobs.
     # When you start using multiple servers, you should split out job processing to a dedicated machine.
@@ -51,9 +49,9 @@ env:
     # Set number of cores available to the application on each server (default: 1).
     # WEB_CONCURRENCY: 2
 
-    # Match this to any external database server to configure Active Record correctly
-    # Use salim_app-db for a db accessory server on same machine via local kamal docker network.
-    # DB_HOST: 192.168.0.2
+    # Database host (MySQL server)
+    SALIM_APP_DATABASE_HOST: 164.92.156.164
+    SALIM_APP_DATABASE_USERNAME: app_salim_odv
 
     # Log everything from Rails
     # RAILS_LOG_LEVEL: debug

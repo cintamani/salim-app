@@ -33,6 +33,9 @@
 # Ignore key files for decrypting credentials and more.
 /config/*.key
 
+# Ignore local Kamal secrets
+/.kamal/secrets.local
+
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
